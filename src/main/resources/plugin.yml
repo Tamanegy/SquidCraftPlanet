@@ -1,0 +1,4 @@
+name: SquidCraftPlanet
+version: 1.0.0
+main: net.squidcraft.com.main.Main
+api-version: 1.18
