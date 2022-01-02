@@ -1,5 +1,6 @@
 package net.squidcraft.com.main.event;
 
+import org.bukkit.Bukkit;
 import org.bukkit.entity.ArmorStand;
 import org.bukkit.scheduler.BukkitRunnable;
 
@@ -11,7 +12,13 @@ public class Timer extends BukkitRunnable {
     }
     @Override
     public void run() {
-        stand.setCustomName("§b" + timer);
+
+        if(timer < 100){
+            stand.setCustomName("§c✗ " + "§b" + timer + " §c✗");
+        } else{
+            stand.setCustomName("§2✓ " + "§b" + timer + " §2✓");
+        }
+
         timer++;
         if(timer == 101){
             cancel();

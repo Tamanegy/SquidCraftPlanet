@@ -14,6 +14,7 @@ public class onPlace implements Listener {
   @EventHandler
   public void Place(BlockPlaceEvent e) {
     Timer timer;
+    onClick Click;
     Player player = e.getPlayer();
     if(e.getBlock().getType().equals(Material.CYAN_GLAZED_TERRACOTTA)){
       ArmorStand armor = Bukkit.getWorld("world").spawn(e.getBlock().getLocation().add(0.5,-1,0.5), ArmorStand.class);
