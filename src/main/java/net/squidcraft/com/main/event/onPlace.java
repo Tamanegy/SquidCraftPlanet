@@ -10,9 +10,5 @@ public class onPlace implements Listener {
   @EventHandler
   public void Place(BlockPlaceEvent e) {
     Player player = e.getPlayer();
-    if (e.getBlock().getType() == Material.BAMBOO_SAPLING || e.getBlock().getType() == Material.BAMBOO) {
-      e.setCancelled(true);
-      player.sendMessage("§cIl semblerais que vous ne pouvez pas cultiver ceci.");
-    } 
   }
 }

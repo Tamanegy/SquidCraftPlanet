@@ -2,3 +2,8 @@ name: SquidCraftPlanet
 version: 1.0.0
 main: net.squidcraft.com.main.Main
 api-version: 1.18
+commands:
+  debug:
+    permission: Squidcraft.use.debug
+    permission-message: "§cVous n'avez pas la permission d'utilisez cette commande"
+    description: Permet de debug.
