@@ -27,7 +27,6 @@ public final class Main extends JavaPlugin {
     getServer().getPluginManager().registerEvents(new onRespawn(),this);
     getServer().getPluginManager().registerEvents(new onSpawn(),this);
     getServer().getPluginManager().registerEvents(new onPortal(),this);
-    getServer().getPluginManager().registerEvents(new onClick(),this);
     instance = this;
     Bukkit.getWorld("world").setPVP(false);
   }

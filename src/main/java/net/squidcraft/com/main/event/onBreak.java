@@ -3,6 +3,8 @@ package net.squidcraft.com.main.event;
 import java.util.Random;
 import net.squidcraft.com.main.itemManager;
 import org.bukkit.Material;
+import org.bukkit.entity.Entity;
+import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -45,6 +47,11 @@ public class onBreak implements Listener {
     if (e.getBlock().getType() == Material.CYAN_GLAZED_TERRACOTTA){
       e.setDropItems(false);
       player.getWorld().dropItemNaturally(e.getBlock().getLocation(), item.HumidityAbsorber());
+      for(Entity entities: e.getBlock().getWorld().getNearbyEntities(e.getBlock().getLocation(), 0.5,1,0.5)){
+        if(entities.getType().equals(EntityType.ARMOR_STAND)){
+          entities.remove();
+        }
+      }
     }
     // GOLD ORE
     if(e.getBlock().getType() == Material.GOLD_ORE){

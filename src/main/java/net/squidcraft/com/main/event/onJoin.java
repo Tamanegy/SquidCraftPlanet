@@ -23,8 +23,9 @@ public class onJoin implements Listener {
     (new BukkitRunnable() {
         public void run() {
           player.spigot().sendMessage(ChatMessageType.ACTION_BAR, (BaseComponent)new TextComponent("§b○" + oxygen.getOxygen()));
-          if (oxygen.getOxygen() == -1)
-            player.damage(1.0D); 
+          if (oxygen.getOxygen() == -1) {
+            player.damage(1.0D);
+          }
           oxygen.remove(1);
           if (player.getWorld().getBlockAt(player.getLocation().add(0.0D, -1.0D, 0.0D)).getType() == Material.SEA_LANTERN) {
             player.spawnParticle(Particle.ENCHANTMENT_TABLE, player.getLocation(), 50);
