@@ -21,7 +21,7 @@ public class onSpawn implements Listener {
       skel.getEquipment().setHelmet(new ItemStack(Material.GLASS));
       skel.getEquipment().setHelmetDropChance(0.0F);
     } 
-    if (!e.getEntity().getType().equals(EntityType.ZOMBIE) && !e.getEntity().getType().equals(EntityType.SKELETON) && !e.getEntity().getType().equals(EntityType.DROPPED_ITEM))
+    if (!e.getEntity().getType().equals(EntityType.ZOMBIE) && !e.getEntity().getType().equals(EntityType.SKELETON) && !e.getEntity().getType().equals(EntityType.DROPPED_ITEM) && !e.getEntity().getType().equals(EntityType.FALLING_BLOCK))
       e.setCancelled(true); 
   }
 }

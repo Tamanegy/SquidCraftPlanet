@@ -1,15 +1,15 @@
 package net.squidcraft.com.main;
 
-import net.kyori.adventure.text.Component;
+
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.checkerframework.checker.units.qual.A;
+
 
 import java.util.ArrayList;
-import java.util.Collections;
+
 
 
 public class itemManager {
